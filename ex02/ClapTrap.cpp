@@ -6,17 +6,17 @@
 /*   By: aconti <aconti@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:30:42 by artucn            #+#    #+#             */
-/*   Updated: 2024/10/28 16:35:42 by aconti           ###   ########.fr       */
+/*   Updated: 2024/10/29 16:59:59 by aconti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : _name("Default"), _hitpoints(10), _energyPoints(10), _attackDamage(0) {
+ClapTrap::ClapTrap() : _name("Default"), _hitpoints(100), _energyPoints(100), _attackDamage(30) {
     std::cout << "ClapTrap is created!" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name) : _name(name), _hitpoints(10), _energyPoints(10), _attackDamage(0) {
+ClapTrap::ClapTrap(std::string name, unsigned int hitpoints, unsigned int energypoints, unsigned int attackdamage) : _name(name), _hitpoints(hitpoints), _energyPoints(energypoints), _attackDamage(attackdamage) {
     std::cout << "ClapTrap " << name << " is created!" << std::endl;
 }
 
@@ -101,3 +101,13 @@ void ClapTrap::beRepaired(unsigned int amount)
     this->_energyPoints -= 1;
 }
 
+
+unsigned int ClapTrap::getHitPoints()
+{
+    return this->_hitpoints;
+}
+
+unsigned int ClapTrap::getDamage()
+{
+    return this->_attackDamage;
+}
