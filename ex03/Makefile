@@ -1,5 +1,5 @@
 NAME = claptrap
-SRC = ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp
+SRC = ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 OBJ_DIR = obj
 OBJ = $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 CPP = c++

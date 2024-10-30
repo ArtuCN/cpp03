@@ -1,11 +1,15 @@
 #include "ScavTrap.hpp"
 
 
-ScavTrap::ScavTrap() : ClapTrap("default", 100, 50, 20) {
+ScavTrap::ScavTrap() : ClapTrap("default", 100, 100, 30) {
 	std::cout<<"ScavTrap default constructor called\n";
 }
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 50, 20) {
+ScavTrap::ScavTrap(std::string name, unsigned int hitpoints, unsigned int energypoints, unsigned int attackdamage) : ClapTrap(name, hitpoints, energypoints, attackdamage){
+    std::cout<<"Constructor called\n";
+}
+
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 100, 30) {
 	std::cout<<"ScavTrap constructor called\n";
 }
 
@@ -68,4 +72,19 @@ void ScavTrap:: takeDamage(unsigned int amount)
         return ;
     }
     this->_hitpoints -= amount;
+}
+
+unsigned int ScavTrap:: getDamage()
+{
+    return this->_attackDamage;
+}
+
+unsigned int ScavTrap:: getHitPoints()
+{
+    return this->_hitpoints;
+}
+
+unsigned int ScavTrap:: getEnergyPoints()
+{
+    return this->_energyPoints;
 }

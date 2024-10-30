@@ -8,7 +8,7 @@
 #define NONE "\033[0m"
 
 
-class ScavTrap: public ClapTrap
+class ScavTrap: virtual public ClapTrap
 {
 	private:
 		
@@ -24,6 +24,9 @@ class ScavTrap: public ClapTrap
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
 
+		unsigned int getDamage();
+		unsigned int getHitPoints();
+		unsigned int getEnergyPoints();
 };
 
 #endif
