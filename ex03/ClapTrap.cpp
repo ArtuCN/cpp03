@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: artucn <artucn@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aconti <aconti@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:30:42 by artucn            #+#    #+#             */
-/*   Updated: 2024/10/31 10:21:21 by artucn           ###   ########.fr       */
+/*   Updated: 2024/10/31 17:12:48 by aconti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,24 @@ ClapTrap::ClapTrap() : _name("Default"), _hitpoints(100), _energyPoints(100), _a
     std::cout << "ClapTrap is created!" << std::endl;
 }
 
+
+ClapTrap::ClapTrap(std::string name, unsigned int hitpoints, unsigned int energypoints, unsigned int attackdamage) : _name(name), _hitpoints(hitpoints), _energyPoints(energypoints), _attackDamage(attackdamage) {
+    std::cout << "ClapTrap " << name << " is created!" << std::endl;
+}
+
 ClapTrap::ClapTrap(const ClapTrap &ClapTrap)
 {
     std::cout << "ClapTrap " << _name << " is copied to " << ClapTrap._name << std::endl;
     *this = ClapTrap;
 }
 
-ClapTrap &ClapTrap::operator=(const ClapTrap &ClapTrap)
+ClapTrap &ClapTrap::operator=(const ClapTrap &ct)
 {
-    std::cout << "ClapTrap " << _name << " is assigned to " << ClapTrap._name << std::endl;
-    _name = ClapTrap._name;
-    _hitpoints = ClapTrap._hitpoints;
-    _energyPoints = ClapTrap._energyPoints;
-    _attackDamage = ClapTrap._attackDamage;
+    std::cout << "ClapTrap " << _name << " is assigned to " << ct._name << std::endl;
+    _name = ct._name;
+    _hitpoints = ct._hitpoints;
+    _energyPoints = ct._energyPoints;
+    _attackDamage = ct._attackDamage;
     return *this;
 }
 
@@ -111,4 +116,19 @@ unsigned int ClapTrap::getDamage()
 unsigned int ClapTrap::getEnergyPoints()
 {
     return this->_energyPoints;
+}
+
+void ClapTrap::setDamage(unsigned int damage)
+{
+    this->_energyPoints;
+}
+
+void ClapTrap::setHitPoints(unsigned int hitPoints)
+{
+    this->_hitpoints;   
+}
+
+void ClapTrap::setEnergyPoints(unsigned int energyPoints)
+{
+    this->_energyPoints;
 }

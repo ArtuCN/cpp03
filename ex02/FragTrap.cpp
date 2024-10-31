@@ -8,10 +8,10 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name, 100, 100, 30) {
 	std::cout<<"FragTrap constructor called\n";
 }
 
-FragTrap &FragTrap::operator=(const FragTrap &FragTrap) {
+FragTrap &FragTrap::operator=(const FragTrap &ft) {
     std::cout << "FragTrap assignment operator called\n";
-    if (this != &FragTrap) {
-        ClapTrap::operator=(FragTrap);
+    if (this != &ft) {
+        ClapTrap::operator=(ft);
     }
     return *this;
 }

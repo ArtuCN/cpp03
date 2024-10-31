@@ -1,19 +1,22 @@
 #include "ScavTrap.hpp"
 
 
-ScavTrap::ScavTrap() : ClapTrap() {
+ScavTrap::ScavTrap() : ClapTrap("default", 100, 50, 20) {
+    
 	std::cout<<"ScavTrap default constructor called\n";
 }
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
+ScavTrap::ScavTrap(std::string name, unsigned int hitpoints, unsigned int energypoints, unsigned int attackdamage) : ClapTrap(name, hitpoints, energypoints, attackdamage){
+    std::cout<<"Constructor called\n";
+}
+
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 50, 20) {
 	std::cout<<"ScavTrap constructor called\n";
 }
 
-ScavTrap &ScavTrap::operator=(const ScavTrap &ScavTrap) {
+ScavTrap &ScavTrap::operator=(const ScavTrap &st) {
     std::cout << "ScavTrap assignment operator called\n";
-    if (this != &ScavTrap) {
-        ClapTrap::operator=(ScavTrap);
-    }
+    (void)st;
     return *this;
 }
 

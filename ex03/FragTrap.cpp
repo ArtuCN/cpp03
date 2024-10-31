@@ -1,18 +1,16 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap() : ClapTrap() {
+FragTrap::FragTrap() : ClapTrap("default", 100, 100, 30) {
 	std::cout<<"FragTrap default constructor called\n";
 }
 
-FragTrap::FragTrap(std::string name) : ClapTrap(name) {
+FragTrap::FragTrap(std::string name) : ClapTrap(name, 100, 100, 30) {
 	std::cout<<"FragTrap constructor called\n";
 }
 
-FragTrap &FragTrap::operator=(const FragTrap &FragTrap) {
+FragTrap &FragTrap::operator=(const FragTrap &ft) {
     std::cout << "FragTrap assignment operator called\n";
-    if (this != &FragTrap) {
-        ClapTrap::operator=(FragTrap);
-    }
+    (void)ft;
     return *this;
 }
 

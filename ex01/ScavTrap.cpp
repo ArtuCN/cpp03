@@ -9,10 +9,10 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 50, 20) {
 	std::cout<<"ScavTrap constructor called\n";
 }
 
-ScavTrap &ScavTrap::operator=(const ScavTrap &ScavTrap) {
+ScavTrap &ScavTrap::operator=(const ScavTrap &sv) {
     std::cout << "ScavTrap assignment operator called\n";
-    if (this != &ScavTrap) {
-        ClapTrap::operator=(ScavTrap);
+    if (this != &sv) {
+        ClapTrap::operator=(sv);
     }
     return *this;
 }

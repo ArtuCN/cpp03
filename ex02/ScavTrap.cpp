@@ -1,7 +1,7 @@
 #include "ScavTrap.hpp"
 
 
-ScavTrap::ScavTrap() : ClapTrap("default", 100, 100, 30) {
+ScavTrap::ScavTrap() : ClapTrap("default", 100, 50, 20) {
 	std::cout<<"ScavTrap default constructor called\n";
 }
 
@@ -9,7 +9,7 @@ ScavTrap::ScavTrap(std::string name, unsigned int hitpoints, unsigned int energy
     std::cout<<"Constructor called\n";
 }
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 100, 30) {
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 50, 20) {
 	std::cout<<"ScavTrap constructor called\n";
 }
 

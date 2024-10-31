@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: artucn <artucn@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aconti <aconti@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:26:59 by artucn            #+#    #+#             */
-/*   Updated: 2024/10/26 14:51:10 by artucn           ###   ########.fr       */
+/*   Updated: 2024/10/31 16:57:37 by aconti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ class ClapTrap
 
         ClapTrap();
         ClapTrap(std::string name);
-        ClapTrap(const ClapTrap &ClapTrap);
-        ClapTrap &operator=(const ClapTrap &ClapTrap);
+        ClapTrap(const ClapTrap &ct);
+        ClapTrap &operator=(const ClapTrap &ct);
         ~ClapTrap();
 
-        std::string getName();    
+        std::string getName();
 };
 
 

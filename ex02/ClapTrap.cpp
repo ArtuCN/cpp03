@@ -6,7 +6,7 @@
 /*   By: aconti <aconti@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:30:42 by artucn            #+#    #+#             */
-/*   Updated: 2024/10/30 16:03:15 by aconti           ###   ########.fr       */
+/*   Updated: 2024/10/31 16:35:57 by aconti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,19 @@ ClapTrap::ClapTrap(std::string name, unsigned int hitpoints, unsigned int energy
     std::cout << "ClapTrap " << name << " is created!" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap &ClapTrap)
+ClapTrap::ClapTrap(const ClapTrap &ct)
 {
-    std::cout << "ClapTrap " << _name << " is copied to " << ClapTrap._name << std::endl;
-    *this = ClapTrap;
+    std::cout << "ClapTrap " << _name << " is copied to " << ct._name << std::endl;
+    *this = ct;
 }
 
-ClapTrap &ClapTrap::operator=(const ClapTrap &ClapTrap)
+ClapTrap &ClapTrap::operator=(const ClapTrap &ct)
 {
-    std::cout << "ClapTrap " << _name << " is assigned to " << ClapTrap._name << std::endl;
-    _name = ClapTrap._name;
-    _hitpoints = ClapTrap._hitpoints;
-    _energyPoints = ClapTrap._energyPoints;
-    _attackDamage = ClapTrap._attackDamage;
+    std::cout << "ClapTrap " << _name << " is assigned to " << ct._name << std::endl;
+    _name = ct._name;
+    _hitpoints = ct._hitpoints;
+    _energyPoints = ct._energyPoints;
+    _attackDamage = ct._attackDamage;
     return *this;
 }
 

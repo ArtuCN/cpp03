@@ -6,7 +6,7 @@
 /*   By: aconti <aconti@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:26:59 by artucn            #+#    #+#             */
-/*   Updated: 2024/10/30 11:39:05 by aconti           ###   ########.fr       */
+/*   Updated: 2024/10/31 16:57:48 by aconti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,18 @@ class ClapTrap
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
 
-        unsigned int getHitPoints();
-        unsigned int getDamage();
-        unsigned int getEnergyPoints();
 
 
         ClapTrap();
         ClapTrap(std::string name);
         ClapTrap(std::string name, unsigned int hitpoints, unsigned int energypoints, unsigned int attackdamage);
-        ClapTrap(const ClapTrap &ClapTrap);
-        ClapTrap &operator=(const ClapTrap &ClapTrap);
+        ClapTrap(const ClapTrap &ct);
+        ClapTrap &operator=(const ClapTrap &ct);
         ~ClapTrap();
 
+        unsigned int getHitPoints();
+        unsigned int getDamage();
+        unsigned int getEnergyPoints();
         std::string getName();    
 };
 

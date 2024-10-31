@@ -5,18 +5,14 @@
 #include <iostream>
 
 
-class DiamondTrap: virtual public FragTrap, virtual public ScavTrap
+class DiamondTrap: virtual public FragTrap, ScavTrap
 {
 	private:
 		std::string _name;
-		unsigned int _hitPoints;
-		unsigned int _energyPoints;
-		unsigned int _attackDamage;
 	public:
 		DiamondTrap();
 		DiamondTrap(std::string name);
-		DiamondTrap(const DiamondTrap &other);
-		DiamondTrap &operator=(const DiamondTrap &other);
+		DiamondTrap &operator=(const DiamondTrap &DiamondTrap);
 		~DiamondTrap();
 };
 
