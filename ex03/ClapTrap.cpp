@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aconti <aconti@student.42.fr>              +#+  +:+       +#+        */
+/*   By: artucn <artucn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:30:42 by artucn            #+#    #+#             */
-/*   Updated: 2024/10/30 16:03:15 by aconti           ###   ########.fr       */
+/*   Updated: 2024/10/31 10:21:21 by artucn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,6 @@
 
 ClapTrap::ClapTrap() : _name("Default"), _hitpoints(100), _energyPoints(100), _attackDamage(30) {
     std::cout << "ClapTrap is created!" << std::endl;
-}
-
-
-ClapTrap::ClapTrap(std::string name, unsigned int hitpoints, unsigned int energypoints, unsigned int attackdamage) : _name(name), _hitpoints(hitpoints), _energyPoints(energypoints), _attackDamage(attackdamage) {
-    std::cout << "ClapTrap " << name << " is created!" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &ClapTrap)

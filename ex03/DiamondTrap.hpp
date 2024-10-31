@@ -5,7 +5,7 @@
 #include <iostream>
 
 
-class DiamondTrap: virtual public FragTrap, ScavTrap
+class DiamondTrap: virtual public FragTrap, virtual public ScavTrap
 {
 	private:
 		std::string _name;
@@ -15,7 +15,8 @@ class DiamondTrap: virtual public FragTrap, ScavTrap
 	public:
 		DiamondTrap();
 		DiamondTrap(std::string name);
-		DiamondTrap &operator=(const DiamondTrap &DiamondTrap);
+		DiamondTrap(const DiamondTrap &other);
+		DiamondTrap &operator=(const DiamondTrap &other);
 		~DiamondTrap();
 };
 
