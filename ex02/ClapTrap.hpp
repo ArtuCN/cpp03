@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aconti <aconti@student.42.fr>              +#+  +:+       +#+        */
+/*   By: artucn <artucn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:26:59 by artucn            #+#    #+#             */
-/*   Updated: 2024/10/31 16:58:00 by aconti           ###   ########.fr       */
+/*   Updated: 2024/11/03 12:13:34 by artucn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,19 +29,21 @@ class ClapTrap
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
 
-
-
         ClapTrap();
         ClapTrap(std::string name);
-        ClapTrap(std::string name, unsigned int hitpoints, unsigned int energypoints, unsigned int attackdamage);
         ClapTrap(const ClapTrap &ct);
         ClapTrap &operator=(const ClapTrap &ct);
         ~ClapTrap();
 
-        unsigned int getHitPoints();
-        unsigned int getDamage();
+        std::string getName();
+        unsigned int getHitpoints();
         unsigned int getEnergyPoints();
-        std::string getName();    
+        unsigned int getAttackDamage();
+
+        void setName(std::string name);
+        void setHitpoints(unsigned int hitpoints);
+        void setEnergyPoints(unsigned int energyPoints);
+        void setAttackDamage(unsigned int attackDamage);
 };
 
 

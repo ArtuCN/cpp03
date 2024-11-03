@@ -14,10 +14,7 @@ class FragTrap: public ClapTrap
 		FragTrap &operator=(const FragTrap &ft);
 		~FragTrap();
 		
-		void guardGate();
 		void attack(std::string const & target);
-        void takeDamage(unsigned int amount);
-        void beRepaired(unsigned int amount);
 
 		void hightFive();
 };
