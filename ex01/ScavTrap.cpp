@@ -15,6 +15,12 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
     ScavTrap::setAttackDamage(20);
 }
 
+ScavTrap::ScavTrap(const ScavTrap &st) {
+    ScavTrap::setHitpoints(st._hitpoints);
+    ScavTrap::setEnergyPoints(st._energyPoints);
+    ScavTrap::setAttackDamage(st._attackDamage);
+}
+
 ScavTrap &ScavTrap::operator=(const ScavTrap &sv) {
     std::cout << "ScavTrap assignment operator called\n";
     if (this != &sv) {

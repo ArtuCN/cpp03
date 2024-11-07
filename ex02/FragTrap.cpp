@@ -14,6 +14,12 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name) {
     this->setAttackDamage(30);
 }
 
+FragTrap::FragTrap(const FragTrap &ft) {
+    FragTrap::setHitpoints(ft._hitpoints);
+    FragTrap::setEnergyPoints(ft._energyPoints);
+    FragTrap::setAttackDamage(ft._attackDamage);
+}
+
 FragTrap &FragTrap::operator=(const FragTrap &ft) {
     std::cout << "FragTrap assignment operator called\n";
     if (this != &ft) {

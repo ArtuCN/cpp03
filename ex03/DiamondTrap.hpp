@@ -20,4 +20,4 @@ class DiamondTrap : public ScavTrap, public FragTrap {
 		void whoAmI();
 };
 
-#endif // DIAMONDTRAP_HPP
+#endif
